@@ -1,0 +1,159 @@
+/* Resetting default browser styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #f8c291, #e66767);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent scrolling on the entire page */
+}
+
+.container {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  height: 80vh; /* Set a fixed height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 40px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #34495e;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+label {
+  font-weight: 600;
+  color: #34495e;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+input[type="submit"] {
+  padding: 0.5rem; /* Reduced padding */
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem; /* Reduced font size */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  flex: 1 1 30%; /* Adjust flex properties for three buttons per row */
+  margin: 1%; /* Margin for spacing */
+}
+
+input[type="submit"]:hover {
+  transform: scale(1.05);
+}
+
+input[type="submit"]#get {
+  background-color: #2ecc71;
+  color: white;
+}
+
+input[type="submit"]#get:hover {
+  background-color: #27ae60;
+}
+
+input[type="submit"]#post {
+  background-color: #3498db;
+  color: white;
+}
+
+input[type="submit"]#post:hover {
+  background-color: #2980b9;
+}
+
+input[type="submit"]#put {
+  background-color: #9b59b6;
+  color: white;
+}
+
+input[type="submit"]#put:hover {
+  background-color: #8e44ad;
+}
+
+input[type="submit"]#patch {
+  background-color: #f1c40f;
+  color: white;
+}
+
+input[type="submit"]#patch:hover {
+  background-color: #f39c12;
+}
+
+input[type="submit"]#delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+input[type="submit"]#delete:hover {
+  background-color: #c0392b;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.response-area {
+  background: #ecf0f1;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  color: #34495e;
+  font-size: 1rem;
+}
+
+p {
+  margin: 0;
+}
